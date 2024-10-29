@@ -1,0 +1,115 @@
+nav {
+    background-color: black; /* خلفية داكنة */
+}
+
+nav a {
+    text-decoration: none;
+    color: white; /* لون النص */
+}
+
+.nav-link {
+    color: white; 
+    transition: color 0.3s; 
+}
+
+.nav-link:hover {
+    color: green; /* لون النص عند التحويم */
+}
+
+.nav-link svg {
+    fill: currentColor; 
+    transition: fill 0.3s; 
+}
+
+.nav-link:hover svg {
+    fill: green; /* لون الأيقونات عند التحويم */
+}
+
+nav ul li {
+    list-style: none; /* إزالة النقاط من القائمة */
+}
+
+nav h1 {
+    color: red; /* لون العنوان */
+}
+
+.custom-font {
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.2rem; 
+    color: #333; 
+}
+
+/* استعلامات الوسائط للتجاوب */
+@media (max-width: 575.98px) {
+    .navbar h1 {
+        font-size: 1.2rem; /* حجم أصغر للعناوين */
+    }
+    .container h2 {
+        font-size: 1.5rem; /* حجم أصغر للعناوين */
+    }
+    img {
+        width: 100%;
+        height: auto; /* صور تناسب تلقائياً */
+    }
+    .custom-font {
+        font-size: 0.9rem; /* حجم أصغر للفقرة */
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar h1 {
+        font-size: 1.5rem; /* حجم أكبر للعناوين */
+    }
+    .custom-font {
+        font-size: 1rem; /* حجم الفقرة */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar h1 {
+        font-size: 1.8rem; /* حجم أكبر للعناوين */
+    }
+    .custom-font {
+        font-size: 1.1rem; /* حجم الفقرة */
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar h1 {
+        font-size: 2rem; /* حجم أكبر للعناوين */
+    }
+    .custom-font {
+        font-size: 1.2rem; /* حجم الفقرة */
+    }
+}
+
+.icon svg {
+    width: 30px; /* حجم الأيقونات */
+    height: 30px; 
+    display: inline-block; /* عرضها */
+    z-index: 10; /* رفع مستوى الأيقونات */
+}
+
+/* استعلامات الوسائط لأحجام الأيقونات */
+@media (max-width: 576px) {
+    .navbar-nav .nav-link svg {
+        width: 24px; /* حجم أصغر للأيقونات */
+        height: 24px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .icon svg {
+        width: 25px; /* حجم أكبر للأيقونات */
+        height: 25px;
+    }
+}
+
+/* أنماط الشريط العلوي */
+.navbar {
+    background-color: black; /* خلفية موحدة */
+}
+
+.navbar .nav-link {
+    color: white !important; /* لون أبيض للنص والأيقونات */
+}
