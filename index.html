@@ -82,170 +82,33 @@
             </div>
         </div>
     </section>
-    <section>
-
-        <div class="container mt-5">
-            <h2>Admin Table</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <tr>
-                        <td>1</td>
-                        <td>ahmed gamal zaki</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>maivel hany foad</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>menna abd l mohsen</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>ahmed gamal shorbagy</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>amr emad ragab</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>mohammed waleed mohammed</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>mohammed yehia mohamed</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>abdalla yehia nooreldin</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>9</td>
-                        <td>nada atia abdlaziz</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>10</td>
-                        <td>tasneem abdlbaset</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>11</td>
-                        <td>mohammed abd l aziz</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>12</td>
-                        <td>menna mostafa mohammed</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>13</td>
-                        <td>mohammed shaaban yousef</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>14</td>
-                        <td>amr ayman ahmed</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>15</td>
-                        <td>ahmed abduallah abdlmomen</td>
-                        <td>
-                            <button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button>
-                        </td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        
-            <div class="mb-3">
-                <input type="text" id="nameInput" class="form-control" placeholder="Enter Name">
-            </div>
-            <button class="btn btn-primary" onclick="addRow()">Add</button>
-        </div>
-        
-        <script>
-        function addRow() {
-            const nameInput = document.getElementById('nameInput');
-            const name = nameInput.value;
-            if (name) {
-                const tableBody = document.getElementById('tableBody');
-                const newRow = document.createElement('tr');
-                const rowCount = tableBody.children.length + 1;
-                newRow.innerHTML = `
-                    <td>${rowCount}</td>
-                    <td>${name}</td>
-                    <td><button class="btn btn-danger btn-sm" onclick="deleteRow(this)">Delete</button></td>
-                `;
-                tableBody.appendChild(newRow);
-                nameInput.value = ''; // Clear input
-            } else {
-                alert("Please enter a name.");
-            }
-        }
-        
-        function deleteRow(button) {
-            const row = button.parentElement.parentElement;
-            row.remove();
-        }
-        </script>
-        
-    </section>
+    <br>
+    <br>
+    <br>
+    <div class="container mt-5">
+        <h2 class="text-center">students list</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="studentList"></tbody>
+        </table>
+        <button class="btn btn-primary" id="addStudentButton">add student</button>
+    </div>
+    
     
  
 
-  
-
+   
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="main.js"></script>
     
 </body>
 </html>
